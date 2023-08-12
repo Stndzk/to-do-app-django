@@ -1,0 +1,8 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<a href="{% url 'tasks' %}">Go back</a>
+<p>Task title: {{task}}</p>
+<p>Task description: {{task.description}}</p>
+<p>Task created: {{task.create}}</p>
+<p>Task completion: {%if task.completion == True%}Completed{%else%}Not completed{%endif%}</p>
+{% endblock content %}
